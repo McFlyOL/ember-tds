@@ -5,7 +5,6 @@ export default class Ex1Route extends Route {
     model() {
         return Note.create();
       }
-
       actions={
         fermer(){
             this.transitionTo("");

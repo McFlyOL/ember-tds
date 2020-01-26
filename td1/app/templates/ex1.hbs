@@ -1,8 +1,9 @@
 <br>
 <br>
-{{textarea}}
+{{textarea value=model.content maxlength=model.MAX}}
 <br>
-<button class="btn btn-primary">Enregistrer</button>
-<button class="btn btn-primary">Effacer</button>
+<button {{action "save" model}}class="btn btn-primary">Enregistrer</button>
+<button {{action "clear" model}}class="btn btn-primary">Effacer</button>
+<div class="alert alert-{{model.style}}">Il vous reste {{model.size}} caractères disponibles</div>
 <button {{action "fermer" model}}class="btn btn-primary">Revenir à l'accueil</button>
 {{outlet}}
