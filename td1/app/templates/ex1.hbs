@@ -5,5 +5,10 @@
 <button {{action "save" model}}class="btn btn-primary">Enregistrer</button>
 <button {{action "clear" model}}class="btn btn-primary">Effacer</button>
 <div class="alert alert-{{model.style}}">Il vous reste {{model.size}} caractères disponibles</div>
+{{#if model.info}}
+<div>{{model.info}}</div>
+{{/if}}
+<br>
+<br>
 <button {{action "fermer" model}}class="btn btn-primary">Revenir à l'accueil</button>
 {{outlet}}
