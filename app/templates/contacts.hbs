@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Contacts
+        </div>
+        <div class="mb-4">
+            <input type="text" class="form-control" placeholder="Filter">
+        </div>
+        <table class="table table-striped" id="lstContact">
+            <tbody>
+                <tr contact-elem="" class="animate-repeat ng-scope">			
+                    <td class="ng-binding">GATES</td>
+                    <td class="ng-binding">bill</td>
+                    <td class="ng-binding">bill@microsoft.com</td>
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                </tr>
+	        </tbody></table>
+        <button class="btn btn-primary mb-4 ">Ajouter...</button>
+
+        <h2>Modifier un contact </h2>
+        <div class="mb-4 container form-group form-inline">
+            <form>
+                <input type="text" class="form-control" placeholder="LastName" required>
+                <input type="text" class="form-control" placeholder="Name" required >
+                <input type="email" class="form-control" placeholder="Email" required>
+                <input type="submit" value="Valider" class="btn btn-primary">
+                <input type="submit" value="Annuler" class="btn btn-primary">
+            </form>
+        </div>
+        <button {{action "fermer" model}}class="btn btn-primary mx-auto d-block">Revenir à l'accueil</button>
+    </div>
+</body>
+{{outlet}}
