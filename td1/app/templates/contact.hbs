@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Contacts
+        </div>
+        <div class="mb-4">
+            <input type="text" class="form-control" placeholder="Filtrer...">
+        </div>
+        <table class="table">
+            <tbody>
+                {{#each this.model as |contact|}}
+                    <tr>
+                        <td>{{contact.nom}}</td>
+                        <td>{{contact.prenom}}</td>
+                        <td>{{contact.email}}</td>
+                        <td class="text-right">
+                            <LinkTo class="btn btn-primary" @route="contact.edit" @model={{contact}}>Modifier...</LinkTo>  
+                            <button type="button" class="btn btn-danger" {{action 'delete' contact}} ><i class="fas fa-trash-alt"></i>Supprimer</button>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <div>
+            <LinkTo class="btn btn-primary" @route="contact.add">Ajouter...</LinkTo>  
+        </div>
+        <button {{action "fermer" model}}class="btn btn-primary mx-auto d-block">Revenir à l'accueil</button>
+    </div>
+</body>
+{{outlet}}
