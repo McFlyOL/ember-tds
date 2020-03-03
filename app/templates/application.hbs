@@ -1,5 +1,7 @@
-<h1>Exercice TD3</h1>
-<LinkTo @route="contacts">
-  Exercice : Contacts
-</LinkTo>
+<h1 class="text-center">Exercice TD3</h1>
+<div class="text-center">
+  {{#link-to 'contact' class="btn btn-primary"}}
+    Exercice : Contacts
+  {{/link-to}}
+</div>
 {{outlet}}
