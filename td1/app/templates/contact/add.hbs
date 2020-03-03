@@ -14,7 +14,7 @@
                             <Input type="text" class="form-control" id="email" aria-describedby="Email" @value={{email}}/>
                         </div>
                         <button type="submit" {{action "addContact" nom prenom email this.model.store}} class="btn btn-primary">Envoyer</button>
-                        <button type="cancel" class="btn btn-danger">Cancel</button>
+                        <LinkTo class="btn btn-danger" @route="contact.index">Annuler</LinkTo>
 
                     </form>
 {{outlet}}
