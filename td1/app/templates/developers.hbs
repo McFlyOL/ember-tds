@@ -1,0 +1,34 @@
+<br/>
+<div class="ui text container">
+  <div class="ui three buttons">
+    <button class="ui button grey">Home</button>
+    <button class="ui button grey">Developers</button>
+
+    {{#link-to "projects" class="ui right floated icon button "}}
+      Projects
+    {{/link-to}}
+  </div>
+  <div class="ui divider"></div>
+  <h1>models\Developer</h1>
+  <LinkTo @route="developers.new" class="ui orange button"> <i class="add icon"></i>Ajouter a new models\Developer...</LinkTo>
+  {{outlet}}
+
+  <table class="ui table ">
+    <thead>
+      <th>Identity</th>
+      <th scope="col"></th>
+      <th></th>
+    </thead>
+    <tbody>
+      {{#each this.model as |developer|}}
+        <tr>
+            <td>{{developer.identity}}</td>
+            <td>
+                <LinkTo @route="developers.update" @model={{developer}} class="btn btn-primary"><i class="fas fa-edit"></i></LinkTo>
+                <LinkTo class="btn btn-danger" @route="developers.delete" @model={{developer}}><i class="icon times"></i></LinkTo>
+            </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

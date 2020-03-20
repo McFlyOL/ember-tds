@@ -1,0 +1,35 @@
+<div class="ui container">
+  <div class="ui aligned basic segment">
+    <div class="ui form">
+        <div class="field">
+            <label>Name</label>
+            <Input class="form-control" @value={{model.project.name}}/>
+        </div>
+        <div class="field">
+            <label>Descriptif</label>
+            <Input class="form-control"  @value={{model.project.descriptif}}/>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>StartDate</label>
+                <Input type="date" class="form-control" @value={{model.project.startDate}}/>
+            </div>
+                    <div class="field">
+                <label>DueDate</label>
+                <Input type="date" class="form-control" @value={{model.project.dueDate}}/>
+            </div>
+        </div>
+        <div class="field">
+            <label>Owner</label>
+            <Input class="form-control" @value={{owner}}/>
+        </div>
+        <div class="field ui centered grid">
+          <button {{action "addProject" model.project}} class="ui green button">Validate</button>
+          <LinkTo class="btn btn-danger" @route="projects">Cancel</LinkTo>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+{{outlet}}

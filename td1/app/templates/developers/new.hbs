@@ -1,0 +1,18 @@
+<div class="ui container">
+  <div class="ui aligned basic segment">
+    <div class="ui form">
+        <div class="field">
+            <label>Identity</label>
+            <Input class="form-control" @value={{model.developer.identity}}/>
+        </div>
+
+        <div class="field ui centered grid">
+          <button {{action "addDeveloper" model.developer }} class="ui green button">Validate</button>
+          <LinkTo class="btn btn-danger" @route="developers">Cancel</LinkTo>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+{{outlet}}

@@ -7,5 +7,14 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('ex1');
+  this.route('developers', function() {
+    this.route('new');
+    this.route('update',{path: '/update/:developer_id'});
+    this.route('delete',{path: '/delete/:developer_id'});
+  });
+  this.route('projects', function() {
+    this.route('new');
+    this.route('update',{path: '/update/:project_id'});
+    this.route('delete',{path: '/delete/:project_id'});
+  });
 });
