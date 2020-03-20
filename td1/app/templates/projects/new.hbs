@@ -23,6 +23,7 @@
             <label>Owner</label>
             <Input class="form-control" @value={{owner}}/>
         </div>
+        <Input type="hidden" @value={{model.project.stories}} value="[]"></Input>
         <div class="field ui centered grid">
           <button {{action "addProject" model.project}} class="ui green button">Validate</button>
           <LinkTo class="btn btn-danger" @route="projects">Cancel</LinkTo>
