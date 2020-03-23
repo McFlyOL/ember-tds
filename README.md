@@ -22,14 +22,17 @@ Ember TD'S
 * Computed properties
 * Création de composants
 
- **[TD4](https://github.com/McFlyOL/ember-td/tree/td4)**
+**Evaluation**
+-----------------
 
-* Se connecter à un service web externe
-* Créer des composants
-* Manipuler les models
+  **[TD4](https://github.com/McFlyOL/ember-td/tree/td4)**
+
+ * Se connecter à un service web externe
+ * Créer des composants
+ * Manipuler les models
  
- **[TD5]()**
+  **[TD5]()**
 
-* Conception d'interfaces Web client riche
-* Manipulations datas
-* Utilisation composants
+ * Conception d'interfaces Web client riche
+ * Manipulations datas
+ * Utilisation composants
