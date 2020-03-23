@@ -22,7 +22,7 @@ Ember TD'S
 * Computed properties
 * Création de composants
 
-**[Evaluation]((https://github.com/McFlyOL/ember-td/tree/evaluation**
+**[Evaluation](https://github.com/McFlyOL/ember-td/tree/evaluation)**
 -----------------
 
   **[TD4](https://github.com/McFlyOL/ember-td/tree/td4)**
