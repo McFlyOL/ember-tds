@@ -31,8 +31,9 @@
             <td>{{moment-format project.startDate "YYYY-MM-DD"}}</td>
             <td>{{moment-format project.dueDate "YYYY-MM-DD"}}</td>
           <td >
-            <LinkTo @route="projects.update" @model={{project}} class="btn btn-primary"><i class="fas fa-edit"></i></LinkTo>
-            <LinkTo @route="projects.delete" @model={{project}} class="btn btn-danger"><i class="fas fa-edit"></i></LinkTo>
+            <LinkTo class="circular ui icon button inverted grey" @route="project" @model={{project.id}}><i class="icon eye grey"></i></LinkTo>
+            <LinkTo @route="projects.update" @model={{project}} class="btn btn-primary"><i class="icon edit"></i></LinkTo>
+            <LinkTo @route="projects.delete" @model={{project}} class="btn btn-danger"><i class="icon times"></i></LinkTo>
           </td>
         </tr>
       {{/each}}

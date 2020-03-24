@@ -1,5 +1,6 @@
-import Model from '@ember-data/model';
+import DS from 'ember-data';
 
-export default class TagModel extends Model {
-
-}
+export default DS.Model.extend({
+    title: DS.attr('string'),
+    color: DS.attr('string')
+  });

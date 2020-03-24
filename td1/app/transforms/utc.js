@@ -3,7 +3,6 @@ import DS from 'ember-data';
 export default DS.Transform.extend({
   deserialize(serialized) {
     var type = typeof serialized;
-      debugger
        if (type === "string") {
          return new Date(Date.parse(serialized));
        } else if (type === "number") {

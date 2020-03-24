@@ -1,1 +1,63 @@
+<div class="ui container">
+<div class="ui icon message">
+    <i class="open folder icon"></i>
+    <div class="content">
+      <div class="header">
+        {{model.project.name}}
+      </div>
+      <p>Ajout d'une story dans le projet</p>
+    </div>    
+  </div>  
+  <form class="ui form">
+    <div class="field">
+      <label>Code</label>
+      <Input type="text" @value={{model.story.code}} placeholder="Enter your code"></Input>
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <Textarea @value={{model.story.descriptif}} placeholder="Enter a description"></Textarea>
+    </div>
+    <h4>Developer</h4>
+    {{#ui-dropdown class="selection" selected=model.story.developer onChange=(action (mut model.story.developer))as |execute mapper|}}
+      <div class="default text">Developer</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each model.developer as |developer|}}
+          <div data-value="{{map-value mapper developer}}" class="item">
+            {{developer.identity}}
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}<br>
+    <div class="ui action input">
+      <Input @value={{model.tag.title}} placeholder="tag"></Input>
+      {{#ui-dropdown class="selection" selected=model.tag.color onChange=(action (mut model.tag.color))as |execute mapper|}}
+        <div class="default text">Colors</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          {{#each model.color as |color|}}
+            <div data-value="{{map-value mapper color}}" class="item">
+              {{color}}
+            </div>
+          {{/each}}
+        </div>
+      {{/ui-dropdown}}<br>
+      <button class="ui button grey" type="submit" {{action "addANewTag" model.tag}}>Nouveau tag</button>
+    </div>
+    {{#ui-dropdown class="fluid multiple selection" selected=model.tags onChange=(action (mut model.tags)) as |execute mapper|}}
+      <i class="dropdown icon"></i>
+      <div class="default text">Select a tag</div>
+      <div class="menu">
+        {{#each model.tags as |tag|}}
+          <div data-value="{{map-value mapper tag}}" class="item">
+            <a class="ui {{tag.color}} empty circular label"></a>
+            {{tag.title}}
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}
+      <button class="ui button green" type="submit" {{action "newStory" model.story model.project model.tags}}>Ajouter</button>
+      <LinkTo @route="project" @model={{model.project.id}} class="btn btn-danger">Cancel</LinkTo>
+  </form>
+</div>
 {{outlet}}
