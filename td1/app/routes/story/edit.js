@@ -17,8 +17,8 @@ export default Route.extend(
       modifyStory: function (story) {
         story.save().then(() => this.transitionTo('project', story.get('project').get('id')));
       },
-      saveTag: function (tag) {
-        this.get('store').createRecord('tag', tag).save();
+      addANewTag: function (tags) {
+        this.get('store').createRecord('tag', tags).save();
       }
     }
   }
