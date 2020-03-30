@@ -1,0 +1,15 @@
+<div class="container">
+    <h4>Modification of a developer</h4>
+    <hr />
+    <form>
+        <div class="form-group">
+            <label for="nom">Identity</label>
+            <Input type="text" class="form-control" @value={{model.identity}} />
+        </div>
+        <button {{action "updateDeveloper" model}} class="btn btn-primary" >Modify</button>
+        <LinkTo @route="developers"class="btn btn-danger">Cancel</LinkTo>
+
+
+    </form>
+</div>
+{{outlet}}
