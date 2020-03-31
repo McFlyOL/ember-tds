@@ -25,13 +25,13 @@ Ember TD'S
 **[Evaluation](https://github.com/McFlyOL/ember-td/tree/evaluation)**
 -----------------
 
-  **[TD4](https://github.com/McFlyOL/ember-td/tree/td4)**
+  **[TD4](https://github.com/McFlyOL/ember-td/tree/evaluation)**
 
  * Se connecter à un service web externe
  * Créer des composants
  * Manipuler les models
  
-  **[TD5]()**
+  **[TD5](https://github.com/McFlyOL/ember-td/tree/evaluation)**
 
  * Conception d'interfaces Web client riche
  * Manipulations datas
