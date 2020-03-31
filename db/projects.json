@@ -1,0 +1,2 @@
+{"_id":"6c055c65-9e1c-4d3d-8034-798597a07721","name":"Etu'Roule","descriptif":"Site de covoiturage étudiant","startDate":"2020-03-21T00:00:00.000Z","dueDate":"2020-03-11T00:00:00.000Z","owner":null,"_etag":{"$oid":"5e83842207f522082f6f762f"}}
+{"_id":"2724638f-6952-4857-8477-734a8d96f533","name":"Recruitments","descriptif":"Facilitate the recruitment of students from ParcourSup","startDate":"2020-02-24T00:00:00.000Z","dueDate":"2020-04-05T00:00:00.000Z","owner":null,"_etag":{"$oid":"5e83843707f522082f6f7630"}}
